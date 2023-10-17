@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+            
+            :root {
+                --primary-color: #14741f;
+                --label-margin-left-width: 160px;
+                --item-margin: 6px;
+            }
+            
+            #form {
+                margin: 20px 200px 20px;
+            }
+            
+            .heading_content {
+                text-align: center;
+                color: var(--primary-color);
+                font-size: 16px;
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+            
+            .content-item {
+                margin-bottom: var(--item-margin);
+            }
+            
+            .content-item__heading {
+                background-color: #016634;
+                color: #b6b6b6;
+                font-size: 13px;
+                padding: 3px;
+                margin-bottom: var(--item-margin);
+            }
+            
+            .content-item__info {
+                padding: 0 160px 0 0;
+            }
+            
+            .content-item__info-detail {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: var(--item-margin);
+            }
+            
+            
+            .content-item__info-label label,
+            .content-item__info-input input,
+            .content-item__info-input textarea,
+            .content-item__info-input select {
+                width: 100%;
+                font-size: 14px;
+            }
+            
+            .content-item__info-label {
+                width: var(--label-margin-left-width);
+                text-align: right;
+                margin-right: var(--item-margin);
+            }
+            
+            .content-item__info-label label {
+                color: var(--primary-color);
+            }
+            
+            .content-item__info-input {
+                flex: 1;
+            }
+            
+            .content-item__info-input input,
+            .content-item__info-input textarea,
+            .content-item__info-input select {
+                border: solid 1px var(--primary-color);
+                padding: 1px;
+            }
+            
+            .content-item__info-input.salary {
+                flex: 1;
+            }
+            
+            input:focus {
+                border: solid 1px var(--primary-color);
+            }
+            
+            .money-unit {
+                flex: 2;
+                font-size: 14px;
+                color: var(--primary-color);
+                margin-left: calc(var( --item-margin) * (-2.2));
+            }
+            
+            .send-form {
+                margin-left: calc(var(--label-margin-left-width) + var(--item-margin));
+                margin-right: calc(2 * var(--item-margin));
+            }
+            
+            .send-form,
+            .remove-form {
+                padding: 2px 10px;
+            }
+            </style>
+    </head>
+    <body>
+        <form id="form" method="post" action="">
+            <div class="heading__form">
+                <h2 class="heading_content">ĐĂNG KÝ THÔNG TIN VIỆC LÀM</h3>
+            </div>
+            <div class="content-item">
+                <h3 class="content-item__heading">Thông tin cá nhân</h3>
+                <div class="content-item__info">
+                    <div class="content-item__info-detail">
+                        <div class="content-item__info-label">
+                            <span style="color:red">*</span>
+                            <label for="name-input" id="name-label">Họ & tên:</label>
+                        </div>
+                        <div class="content-item__info-input">
+                            <input type="text" id="name-input" style="width: 50%;">
+                        </div>
+                    </div>
+                    <div class="content-item__info-detail">
+                        <div class="content-item__info-label">
+                            <span style="color:red">*</span>
+                            <label for="birth-input">Ngày tháng năm sinh:</label>
+                        </div>
+                        <div class="content-item__info-input">
+                            <input type="text" id="name-input" style="width: 30%;">
+                        </div>
+                    </div>
+                    <div class="content-item__info-detail">
+                        <div class="content-item__info-label">
+                            <label for="sex-input">Giới tính:</label>
+                        </div>
+                        <div class="content-item__info-input">
+                            <select name="" id="sex-input" style="width: 12%;">
+                                <option value="">Chọn</option>
+                                <option value="male">Nam</option>
+                                <option value="female">Nữ</option>
+                            </select>    
+                        </div>
+                    </div>
+                    <div class="content-item__info-detail">
+                        <div class="content-item__info-label">
+                            <label for="married-input">Tình trạng hôn nhân:</label>
+                        </div>
+                        <div class="content-item__info-input">
+                            <select name="" id="married-input"style="width: 25%;">
+                                <option value="">Chọn</option>
+                                <option value="single">Độc thân</option>
+                                <option value="married">Đã kết hôn</option>
+                            </select> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-item">
+                <h3 class="content-item__heading">Thông tin liên lạc</h3>
+                <div class="content-item__info">
+                    <div class="content-item__info-detail">
+                        <div class="content-item__info-label">
+                            <span style="color:red">*</span>
+                            <label for="address-input">Địa chỉ:</label>
+                        </div>
+                        <div class="content-item__info-input">
+                            <input type="text" id="address-input"">
+                        </div>
+                    </div>
+                    <div class="content-item__info-detail">
+                        <div class="content-item__info-label">
+                            <span style="color:red">*</span>
+                            <label for="province-input">Tỉnh/Thành phố:</label>
+                        </div>
+                        <div class="content-item__info-input">
+                            <input type="text" id="province-input" style="width: 30%;">
+                        </div>
+                    </div>
+                    <div class="content-item__info-detail">
+                        <div class="content-item__info-label">
+                            <label for="phone-input">Số điện thoại:</label>
+                        </div>
+                        <div class="content-item__info-input">
+                            <input type="text" id="phone-input" style="width: 30%;">
+                        </div>
+                    </div>
+                    <div class="content-item__info-detail">
+                        <div class="content-item__info-label">
+                            <label for="mobilephone-input">Số điện thoại di dộng:</label>
+                        </div>
+                        <div class="content-item__info-input">
+                            <input type="text" id="mobilephone-input" style="width: 30%;">
+                        </div>
+                    </div>
+                    <div class="content-item__info-detail">
+                        <div class="content-item__info-label">
+                            <span style="color:red">*</span>
+                            <label for="email-input">Email:</label>
+                        </div>
+                        <div class="content-item__info-input">
+                            <input type="text" id="email-input" style="width: 50%;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-item">
+                <h3 class="content-item__heading">Trình độ học vấn</h3>
+                <div class="content-item__info">
+                    <div class="content-item__info-detail">
+                        <div class="content-item__info-label">
+                            <span style="color:red">*</span>
+                            <label for="level-input">Trình độ học vấn:</label>
+                        </div>
+                        <div class="content-item__info-input">
+                            <select name="" id="level-input"  style="width: 25%;">
+                                <option value="">Chọn</option>
+                                <option value="junior">Trung học cơ sở</option>
+                                <option value="higher">Trung học phổ thông</option>
+                                <option value="college">Cao đẳng</option>
+                                <option value="university">Đại học</option>
+                            </select> 
+                        </div>
+                    </div>
+                    <div class="content-item__info-detail">
+                        <div class="content-item__info-label">
+                            <span style="color:red">*</span>
+                            <label for="level-detail-input">Thông tin về học vấn:</label>
+                        </div>
+                        <div class="content-item__info-input">
+                            <textarea id="level-detail-input" cols="30" rows="3"  style="width: 80%;"></textarea>
+                        </div>
+                    </div>
+                    <div class="content-item__info-detail">
+                        <div class="content-item__info-label">
+                            <label for="language-input">Ngoại ngữ:</label>
+                        </div>
+                        <div class="content-item__info-input">
+                            <textarea id="language-input" cols="30" rows="3"  style="width: 80%;"></textarea>
+                        </div>
+                    </div>
+                    <div class="content-item__info-detail">
+                        <div class="content-item__info-label">
+                            <label for="skill-input">Kỹ năng:</label>
+                        </div>
+                        <div class="content-item__info-input">
+                            <textarea id="skill-input" cols="30" rows="3"  style="width: 80%;"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-item">
+                <h3 class="content-item__heading">Kinh nghiệm làm việc</h3>
+                <div class="content-item__info">
+                    <div class="content-item__info-detail">
+                        <div class="content-item__info-label">
+                            <label for="experience-year-input">Số năm kinh nghiệm:</label>
+                        </div>
+                        <div class="content-item__info-input">
+                            <input type="text" id="experience-year-input" style="width: 30%;">
+                        </div>
+                    </div>
+                    <div class="content-item__info-detail">
+                        <div class="content-item__info-label">
+                            <label for="experience-input">Kinh nghiệm làm việc:</label>
+                        </div>
+                        <div class="content-item__info-input">
+                            <textarea id="experience-input" cols="30" rows="3" style="width: 80%;"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-item">
+                <h3 class="content-item__heading">Mong muốn của bản thân</h3>
+                <div class="content-item__info">
+                    <div class="content-item__info-detail">
+                        <div class="content-item__info-label">
+                            <label for="job-desire-input">Việc làm mong muốn:</label>
+                        </div>
+                        <div class="content-item__info-input">
+                            <textarea id="job-desire-input" cols="30" rows="3"  style="width: 80%;"></textarea>
+                        </div>
+                    </div>
+                    <div class="content-item__info-detail">
+                        <div class="content-item__info-label">
+                            <span style="color:red">*</span>
+                            <label for="salary-input">Mức lương thỏa thuận:</label>
+                        </div>
+                        <div class="content-item__info-input salary">
+                            <input type="text" id="salary-input" style="width: 88%;">
+                        </div>
+                        <div class="money-unit">VNĐ</span>
+                    </div>
+                </div>
+            </div>
+            <button class="send-form">Gửi hồ sơ</button>
+            <button class="remove-form">Xóa form</button>
+        </div>
+        
+        <script src="" async defer></script>
+    </body>
+</html>
