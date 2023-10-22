@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <p>
+            <strong id="name"></strong>
+        </p>
+        <p>
+            <u id="age"></u>
+        </p>
+
+        <script type="text/javascript">
+            function getName() {
+              let name = prompt("Bạn hãy nhập vào tên", "");
+
+              if (name == null || name == ""){
+                document.getElementById("name").innerHTML = "Bạn đã hủy nhập tên";
+              }
+              else {
+                document.getElementById("name").innerHTML = name;
+              }
+            }
+            
+            getName();
+        </script>
+
+        <script type="text/javascript">
+            function getAge() {
+              let age = prompt("Bạn hãy nhập vào tuổi", "");
+
+              if (age == null || age == ""){
+                document.getElementById("age").innerHTML = "Bạn đã hủy nhập tuổi";
+              }
+              else {
+                document.getElementById("age").innerHTML = age;
+              }
+            }
+
+            getAge();
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
