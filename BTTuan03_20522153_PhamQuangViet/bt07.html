@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="">
+  <p id="age"></p>
+
+  <script type="text/javascript">
+    let number = parseFloat(prompt("Nhập vào một số nguyên", ""));
+
+    while (!Number.isInteger(number)) {
+      alert("Số nhập vào phải là số nguyên tố");
+      number = prompt("Nhập vào một số nguyên", "");
+    }
+
+    let check = true;
+
+    if (number < 2) {
+      check = false;
+    } else if (number == 2) {
+      check == true;
+    } else if (number % 2 == 0) {
+      check = false;
+    } else {
+      for (var i = 3; i < Math.sqrt(number); i += 2) {
+        if (number % i == 0) {
+          check = false;
+          break;
+        }
+      }
+    }
+
+    document.getElementById("age").innerHTML = check
+      ? `Số ${number} là số nguyên tố`
+      : `Số ${number} không là số nguyên tố`
+  </script>
+</head>
+
+<body>
+</body>
+
+</html>
