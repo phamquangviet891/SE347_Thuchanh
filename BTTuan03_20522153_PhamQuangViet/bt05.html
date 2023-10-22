@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="">
+  <script type="text/javascript">
+    function a_plus_b(form) {
+      a = eval(form.a.value);
+      b = eval(form.b.value);
+      c = a + b;
+      form.ans.value = c;
+    }
+
+    function a_minus_b(form) {
+      a = eval(form.a.value);
+      b = eval(form.b.value);
+      c = a - b;
+      form.ans.value = c;
+    }
+
+    function a_times_b(form) {
+      a = eval(form.a.value);
+      b = eval(form.b.value);
+      c = a * b;
+      form.ans.value = c;
+    }
+
+    function a_div_b(form) {
+      a = eval(form.a.value);
+      b = eval(form.b.value);
+      c = a / b;
+      form.ans.value = c;
+    }
+
+    function a_pow_b(form) {
+      a = eval(form.a.value);
+      b = eval(form.b.value);
+      c = Math.pow(a, b);
+      form.ans.value = c;
+    }
+  </script>
+</head>
+
+<body>
+  <form>
+    <p>
+      <input type="text" size="4" name="a">
+      <input type="button" size="4" value="+" onclick="a_plus_b(this.form)">
+      <input type="button" size="4" value="-" onclick="a_minus_b(this.form)">
+      <input type="button" size="4" value="*" onclick="a_times_b(this.form)">
+      <input type="button" size="4" value="/" onclick="a_div_b(this.form)">
+      <input type="button" size="4" value="^" onclick="a_pow_b(this.form)">
+      <input type="text" size="4" name="b">
+      <input type="text" size="4" name="ans">
+    </p>
+  </form>
+</body>
+
+</html>
